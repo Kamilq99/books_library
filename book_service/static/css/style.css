@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4; /* Kolor tła strony */
+}
+
+form {
+    background-color: #ffffff; /* Kolor tła formularza */
+    border: 1px solid #ddd; /* Kolor ramki formularza */
+    border-radius: 8px; /* Zaokrąglone rogi formularza */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Cień formularza */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #007bff; /* Kolor przycisku */
+    color: #ffffff; /* Kolor tekstu przycisku */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3; /* Kolor przycisku po najechaniu */
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.book {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+h1, h2 {
+    color: #333;
+}

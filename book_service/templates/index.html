@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Book Library</h1>
+    
+    <form method="POST" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.title.label }}
+            {{ form.title() }}
+        </div>
+        <div>
+            {{ form.author.label }}
+            {{ form.author() }}
+        </div>
+        <div>
+            {{ form.cover.label }}
+            {{ form.cover() }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+
+    <h2>Book List</h2>
+    <div class="book-list">
+        {% for book in books %}
+            <div class="book">
+                <h3>{{ book.title }}</h3>
+                <p>Author: {{ book.author }}</p>
+                {% if book.cover %}
+                    <img src="{{ url_for('static', filename='uploads/' ~ book.cover) }}" alt="{{ book.title }} cover" class="book-cover">
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
